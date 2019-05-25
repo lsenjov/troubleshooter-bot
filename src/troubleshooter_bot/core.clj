@@ -7,8 +7,8 @@
 (comment
   (bot/start)
   (bot/say "asdf")
-  (bot/register-builtins!)
   (bot/clear-extensions!)
+  (bot/register-builtins!)
   (->> (ns-publics 'discord.bot) vals pprint)
   (->> (bot/get-extensions) pprint)
   )
