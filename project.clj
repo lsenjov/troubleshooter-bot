@@ -5,5 +5,9 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.10.0"]
 
-                 [discord.clj "2.0.0"]]
+                 [discord.clj "2.0.0"]
+                 
+                 [com.layerware/hugsql "0.4.9"]
+                 [org.xerial/sqlite-jdbc "3.27.2.1"]
+                 ]
   :repl-options {:init-ns troubleshooter-bot.core})

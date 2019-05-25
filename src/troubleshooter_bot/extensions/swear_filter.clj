@@ -50,9 +50,9 @@
 (defn swear-filter-handler*
   [prefix client {:keys [content id] :as message}]
   (timbre/debug \newline
-                "    " prefix \newline
-                "    " (pprint client) \newline
-                "    " (pprint message) \newline
+                ;"    " prefix \newline
+                ;"    " (pprint client) \newline
+                ;"    " (pprint message) \newline
                 "    " content
                 )
   (if (re-seq swear-capture-pattern content)
