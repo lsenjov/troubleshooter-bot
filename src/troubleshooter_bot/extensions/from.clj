@@ -27,11 +27,15 @@
           )
       (-> ret
           :out
-          (str "`help from` for more details")
+          (clojure.string/split #"\n")
+          first
+          (str "\n`help from` for more details")
           bot/say
-          )
-      ))
+          )))
   (catch Exception e (bot/say (.getMessage e)))))
+(comment
+  (clojure.java.shell/sh "units" "29.1cm" "oz")
+  )
 (bot/defcommand from
   [client message]
   "Converts units from one to another.
