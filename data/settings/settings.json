@@ -1,0 +1,8 @@
+{
+    "token" : "",
+    "prefix" : "!",
+    "bot-name" : "TroubleshooterBot",
+    "extension-folders" : [
+        "src/troubleshooter_bot/extensions"
+        ]
+}
