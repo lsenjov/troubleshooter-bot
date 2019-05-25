@@ -1,5 +1,5 @@
 {
-    "token" : "",
+    "token" : "Your token here",
     "prefix" : "!",
     "bot-name" : "TroubleshooterBot",
     "extension-folders" : [
