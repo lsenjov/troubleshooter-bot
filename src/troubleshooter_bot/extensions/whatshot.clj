@@ -10,7 +10,7 @@
 (def ignore-words
   #{
     "roles" "blinky" "addrole" "giveto" "help" "pac_ghost" "whatshot" "sysinfo"
-    "what"
+    "what" "from"
     })
 
 (defn word-remover
@@ -40,6 +40,7 @@
                   "    " (get-in message [:author :username]) \newline
                   "    " (vec tokens))
     (->> tokens
+         (map clojure.string/lower-case)
          (map (partial hash-map :word))
          (sql/insert-multi! :wordtrack))))
 (bot/defhandler whatshot-handler

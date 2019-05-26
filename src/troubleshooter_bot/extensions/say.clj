@@ -12,5 +12,7 @@
 (bot/defcommand say
   [client message]
   "Bot repeats what has been said"
+  (pprint client)
+  (pprint message)
   (say* client message)
   )
