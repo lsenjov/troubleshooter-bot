@@ -8,6 +8,7 @@
   (bot/start)
   (bot/say "asdf")
   (bot/clear-extensions!)
+  (bot/clear-handlers!)
   (bot/register-builtins!)
   (->> (ns-publics 'discord.bot) vals pprint)
   (->> (bot/get-extensions) pprint)
